@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Muhammad Ali",
+    "email": "muhammad.ali@gmail.com",
+    "password": "hashed_password_123",
+    "role": "admin",
+    "status": "active",
+    "created": "2023-11-15",
+    "city": "Karachi",
+    "phone": "+92 321 1234567",
+    "lastLogin": "2024-05-10"
+  },
+  {
+    "id": 2,
+    "name": "Fatima Khan",
+    "email": "fatima.khan@yahoo.com",
+    "role": "customer",
+    "status": "active",
+    "created": "2023-12-03",
+    "city": "Lahore",
+    "phone": "+92 300 9876543",
+    "lastLogin": "2024-05-08"
+  },
+  {
+    "id": 3,
+    "name": "Usama Khalid",
+    "email": "usama.khalid@hotmail.com",
+    "role": "customer",
+    "status": "active",
+    "created": "2024-01-22",
+    "city": "Islamabad",
+    "phone": "+92 333 4567890",
+    "lastLogin": "2024-05-11"
+  },
+  {
+    "id": 4,
+    "name": "Faiqa Rana",
+    "email": "faiqa.rana@hotmail.com",
+    "role": "customer",
+    "status": "active",
+    "created": "2024-01-22",
+    "city": "Islamabad",
+    "phone": "+92 333 4567890",
+    "lastLogin": "2024-05-11"
+  },
+  {
+    "id": 5,
+    "name": "Baharey Gul",
+    "email": "baharey.gul@hotmail.com",
+    "role": "customer",
+    "status": "active",
+    "created": "2024-01-22",
+    "city": "Islamabad",
+    "phone": "+92 333 4567890",
+    "lastLogin": "2024-05-11"
+  }
+]

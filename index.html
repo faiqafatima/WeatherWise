@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherWise - Your Personal Weather Assistant</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <div class="container-fluid p-0">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <div class="logo">
+          <h1>WeatherWise</h1>
+        </div>
+        <button class="hamburger d-lg-none" type="button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav-links navbar-nav ms-auto mb-2 mb-lg-0">
+            <li>
+              <a href="#" class="active" data-page="home">Home</a>
+            </li>
+            <li class="auth-required hidden">
+              <a href="#" data-page="dashboard">Dashboard</a>
+            </li>
+            <li class="auth-required hidden">
+              <a href="#" data-page="forecast">Forecast</a>
+            </li>
+            <li class="auth-required hidden">
+              <a href="#" data-page="alerts">Alerts</a>
+            </li>
+            <li class="auth-required hidden">
+              <a href="#" data-page="locations">Locations</a>
+            </li>
+            <li style="position: sticky;">
+              <a href="#" data-page="about">About</a>
+            </li>
+            <li style="position: sticky;">
+              <a href="#" data-page="features">Features</a>
+            </li>
+          </ul>
+          <div class="auth-buttons ms-lg-4">
+            <button id="login-btn" class="btn">Login</button>
+            <button id="signup-btn" class="btn btn-primary">Sign Up</button>
+            <div class="user-profile hidden">
+              <img
+                src="f2.jpg"
+                alt="Profile"
+                class="profile-img"
+              />
+              <div class="dropdown-content">
+                <a href="#" data-page="profile">Profile</a>
+                <a href="#" data-page="settings">Settings</a>
+                <a href="#" id="logout-btn">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+      <!-- Home Page (Landing Page for Non-Authenticated Users) -->
+      <section id="home" class="page active">
+        <div id="landing-page">
+          <div class="hero-landing">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                  <h1>Your Personal Weather Assistant</h1>
+                  <p>
+                    Get accurate forecasts, real-time updates, and
+                    personalized weather alerts for any location around the
+                    world.
+                  </p>
+                  <div class="cta-buttons">
+                    <button id="get-started-btn" class="btn btn-primary">
+                      <i class="fas fa-rocket me-2"></i> Get Started
+                    </button>
+                    <button id="learn-more-btn" class="btn btn-outline">
+                      <i class="fas fa-info-circle me-2"></i> Learn More
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-6 hero-image">
+                  <img src="f.jpg" alt="Weather Illustration" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="features-section">
+            <div class="container">
+              <h2>Why Choose WeatherWise?</h2>
+              <div class="row features-grid">
+                <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location-Based Forecasts</h3>
+                    <p>
+                      Get accurate weather forecasts for any location
+                      worldwide with our advanced location tracking.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Real-Time Updates</h3>
+                    <p>
+                      Stay informed with real-time weather updates and
+                      notifications for changing conditions.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Personalized Alerts</h3>
+                    <p>
+                      Set up custom alerts for specific weather conditions
+                      that matter to you.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Detailed Forecasts</h3>
+                    <p>
+                      Access hourly and 7-day forecasts with comprehensive
+                      weather data and visualizations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials-section">
+            <div class="container">
+              <h2>What Our Users Say</h2>
+              <div class="row testimonials-container">
+                <div class="col-md-4 mb-4">
+                  <div class="testimonial-card">
+                    <div class="testimonial-content">
+                      <p>
+                        "WeatherWise has been a game-changer for planning my
+                        outdoor activities. The alerts are timely and
+                        accurate!"
+                      </p>
+                    </div>
+                    <div class="testimonial-author">
+                      <img src="f1.jpg" alt="User" class="testimonial-img" />
+                      <div class="author-info">
+                        <h4>Roger Johnson</h4>
+                        <p>Hiking Enthusiast</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="testimonial-card">
+                    <div class="testimonial-content">
+                      <p>
+                        "As a professional photographer, I rely on accurate
+                        weather forecasts. WeatherWise has never let me down."
+                      </p>
+                    </div>
+                    <div class="testimonial-author">
+                      <img src="f2.jpg" alt="User" class="testimonial-img" />
+                      <div class="author-info">
+                        <h4>Michael Chen</h4>
+                        <p>Photographer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="testimonial-card">
+                    <div class="testimonial-content">
+                      <p>
+                        "The detailed hourly forecasts help me plan my day
+                        efficiently. Best weather app I've used!"
+                      </p>
+                    </div>
+                    <div class="testimonial-author">
+                      <img src="f3.png" alt="User" class="testimonial-img" />
+                      <div class="author-info">
+                        <h4>Carlos Rodriguez</h4>
+                        <p>Business Owner</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-section">
+            <div class="container text-center">
+              <h2>Ready to Experience Better Weather Forecasting?</h2>
+              <p>
+                Join thousands of satisfied users who rely on WeatherWise for
+                their daily weather needs.
+              </p>
+              <button id="signup-cta-btn" class="btn btn-primary">
+                <i class="fas fa-user-plus me-2"></i> Create Free Account
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weather Content (Only visible after login) -->
+        <div id="weather-content" class="hidden">
+          <div class="hero">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                  <h1>Real-time Weather Updates</h1>
+                  <p>
+                    Get accurate weather forecasts for any location worldwide
+                  </p>
+                  <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input
+                      type="text"
+                      id="search-location"
+                      placeholder="Search for a city..."
+                    />
+                    <button id="search-btn" class="btn btn-primary">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-6 hero-image">
+                  <img
+                    src="f.jpg"
+                    alt="Weather Illustration"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="current-weather">
+            <div class="container">
+              <h2>Current Weather</h2>
+              <div id="weather-display" class="weather-card">
+                <div class="location-info">
+                  <h3 class="current-location-name">Loading weather data...</h3>
+                  <p class="date">Please wait...</p>
+                </div>
+                <div class="text-center p-5">
+                  <i class="fas fa-spinner fa-spin fa-3x" style="color: var(--primary-color);"></i>
+                  <p class="mt-3">Loading weather information...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hourly-forecast">
+            <div class="container">
+              <h2>Hourly Forecast</h2>
+              <div class="forecast-container" id="hourly-forecast-container">
+                <!-- Hourly forecast items will be added dynamically -->
+                <div class="forecast-item skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+                <div class="forecast-item skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+                <div class="forecast-item skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+                <div class="forecast-item skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="weekly-forecast">
+            <div class="container">
+              <h2>7-Day Forecast</h2>
+              <div class="forecast-container" id="weekly-forecast-container">
+                <!-- Weekly forecast items will be added dynamically -->
+                <div class="forecast-item weekly skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+                <div class="forecast-item weekly skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+                <div class="forecast-item weekly skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+                <div class="forecast-item weekly skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Page -->
+      <section id="about" class="page">
+        <div class="container">
+          <h1>About WeatherWise</h1>
+          <div class="about-container">
+            <div class="about-content">
+              <h2>Our Mission</h2>
+              <p>
+                At WeatherWise, our mission is to provide accurate, timely,
+                and user-friendly weather information to help people make
+                informed decisions about their day-to-day activities.
+              </p>
+
+              <h2>Our Story</h2>
+              <p>
+                WeatherWise was founded in 2022 by a team of meteorologists
+                and software developers who were passionate about making
+                weather data more accessible and useful for everyone. We
+                noticed that existing weather services were either too complex
+                for everyday users or too simplified to be truly helpful.
+              </p>
+              <p>
+                We set out to create a platform that strikes the perfect
+                balance - providing detailed, accurate weather information in
+                a format that's easy to understand and use.
+              </p>
+
+              <h2>Our Technology</h2>
+              <p>
+                We use advanced weather prediction models and data from
+                multiple reliable sources to ensure our forecasts are as
+                accurate as possible. Our platform is constantly evolving,
+                with regular updates to improve accuracy and add new features
+                based on user feedback.
+              </p>
+
+              <h2>Our Team</h2>
+              <div class="row team-grid">
+                <div class="col-md">
+                  <div class="team-member">
+                    <img src="team1.jpg" alt="Team Member" />
+                    <h3>Dr. Jessy Wilson</h3>
+                    <p>Chief Meteorologist</p>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="team-member">
+                    <img src="team2.jpg" alt="Team Member" />
+                    <h3>Sophia Chen</h3>
+                    <p>Lead Developer</p>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="team-member">
+                    <img src="team3.png" alt="Team Member" />
+                    <h3>Marcus Johnson</h3>
+                    <p>UX Designer</p>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="team-member">
+                    <img src="team4.jpg" alt="Team Member" />
+                    <h3>Olivia Martinez</h3>
+                    <p>Data Scientist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Page -->
+      <section id="features" class="page">
+        <div class="container">
+          <h1>Features</h1>
+          <div class="features-container">
+            <div class="feature-block">
+              <div class="feature-icon large">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <div class="feature-details">
+                <h2>Location-Based Weather</h2>
+                <p>
+                  Get accurate weather forecasts for any location worldwide.
+                  Save your favorite locations for quick access and receive
+                  customized forecasts based on your current location.
+                </p>
+                <ul class="feature-list">
+                  <li>Current location detection</li>
+                  <li>Save multiple locations</li>
+                  <li>Quick switching between saved locations</li>
+                  <li>Global coverage</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="feature-block">
+              <div class="feature-icon large">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="feature-details">
+                <h2>Detailed Forecasts</h2>
+                <p>
+                  Access comprehensive weather data including current
+                  conditions, hourly forecasts, and 7-day predictions. Our
+                  detailed forecasts provide all the information you need to
+                  plan your activities.
+                </p>
+                <ul class="feature-list">
+                  <li>Current weather conditions</li>
+                  <li>Hourly forecasts for the next 24 hours</li>
+                  <li>7-day forecast with high/low temperatures</li>
+                  <li>Precipitation, humidity, wind, and pressure data</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="feature-block">
+              <div class="feature-icon large">
+                <i class="fas fa-bell"></i>
+              </div>
+              <div class="feature-details">
+                <h2>Personalized Alerts</h2>
+                <p>
+                  Set up custom alerts for specific weather conditions that
+                  matter to you. Receive timely notifications about severe
+                  weather, temperature changes, or any other conditions you
+                  specify.
+                </p>
+                <ul class="feature-list">
+                  <li>Severe weather warnings</li>
+                  <li>Custom temperature alerts</li>
+                  <li>Precipitation notifications</li>
+                  <li>Wind speed alerts</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="feature-block">
+              <div class="feature-icon large">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              <div class="feature-details">
+                <h2>Customizable Dashboard</h2>
+                <p>
+                  Personalize your weather dashboard to show the information
+                  that matters most to you. Arrange widgets, choose display
+                  units, and customize your weather viewing experience.
+                </p>
+                <ul class="feature-list">
+                  <li>Customizable layout</li>
+                  <li>Choice of metric or imperial units</li>
+                  <li>Dark and light mode</li>
+                  <li>Widget arrangement</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dashboard Page (Auth Required) -->
+      <section id="dashboard" class="page auth-required-page">
+        <div class="container">
+          <h1>Your Weather Dashboard</h1>
+          <div class="dashboard-container">
+            <div class="row">
+              <div class= "col-md">
+                <div class="dashboard-sidebar">
+                  <div class="user-info">
+                    <img
+                      src="f3.png"
+                      alt="Profile"
+                      class="profile-img-large"
+                    />
+                    <h3>Welcome, <span id="user-name">User</span></h3>
+                  </div>
+                  <ul class="dashboard-menu">
+                    <li class="active"><a href="#overview">Overview</a></li>
+                    <li><a href="#saved-locations">Saved Locations</a></li>
+                    <li><a href="#alerts">Weather Alerts</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg">
+                <div class="dashboard-content">
+                  <div id="overview" class="dashboard-section active">
+                    <h2>Overview</h2>
+                    <div class="row dashboard-cards">
+                      <div class="col-lg">
+                        <div class="dashboard-card">
+                          <h3>Current Location</h3>
+                          <div class="location-weather">
+                            <div class="location-info">
+                              <h4 class="current-location-name">Loading...</h4>
+                              <p class="date">Loading...</p>
+                            </div>
+                            <div class="weather-summary">
+                              <div class="temperature">
+                                <span class="temp">--°C</span>
+                              </div>
+                              <div class="weather-icon">
+                                <i class="fas fa-cloud-sun fa-2x"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg">
+                        <div class="dashboard-card">
+                          <h3>Active Alerts</h3>
+                          <div class="alert-list">
+                            <div class="alert-item">
+                              <i class="fas fa-exclamation-triangle"></i>
+                              <div class="alert-info">
+                                <h4>Heavy Rain Warning</h4>
+                                <p>New York - Tomorrow</p>
+                              </div>
+                            </div>
+                            <a href="#" class="view-all">View All Alerts</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg">
+                        <div class="dashboard-card">
+                          <h3>Saved Locations</h3>
+                          <div class="saved-locations-list">
+                            <div class="location-item">
+                              <div class="location-name">New York</div>
+                              <div class="location-temp">24°C</div>
+                              <i class="fas fa-cloud-sun"></i>
+                            </div>
+                            <div class="location-item">
+                              <div class="location-name">London</div>
+                              <div class="location-temp">18°C</div>
+                              <i class="fas fa-cloud-rain"></i>
+                            </div>
+                            <div class="location-item">
+                              <div class="location-name">Tokyo</div>
+                              <div class="location-temp">28°C</div>
+                              <i class="fas fa-sun"></i>
+                            </div>
+                            <a href="#" class="view-all">Manage Locations</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="saved-locations" class="dashboard-section">
+                    <h2>Saved Locations</h2>
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="add-location-card">
+                          <h3>Add New Location</h3>
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              id="add-location"
+                              placeholder="Enter city name..."
+                            />
+                            <button
+                              id="add-location-btn"
+                              class="btn btn-primary"
+                            >
+                              Add
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row locations-list">
+                      <!-- Location cards will be added dynamically -->
+                      <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="location-card">
+                          <div class="location-info">
+                            <h3>New York</h3>
+                            <p>United States</p>
+                          </div>
+                          <div class="location-weather">
+                            <div class="location-temp">24°C</div>
+                            <div class="location-icon">
+                              <i class="fas fa-cloud-sun"></i>
+                            </div>
+                          </div>
+                          <div class="location-actions">
+                            <button class="btn btn-small">
+                              View Details
+                            </button>
+                            <button class="btn btn-small btn-outline">
+                              Remove
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="location-card">
+                          <div class="location-info">
+                            <h3>London</h3>
+                            <p>United Kingdom</p>
+                          </div>
+                          <div class="location-weather">
+                            <div class="location-temp">18°C</div>
+                            <div class="location-icon">
+                              <i class="fas fa-cloud-rain"></i>
+                            </div>
+                          </div>
+                          <div class="location-actions">
+                            <button class="btn btn-small">
+                              View Details
+                            </button>
+                            <button class="btn btn-small btn-outline">
+                              Remove
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="location-card">
+                          <div class="location-info">
+                            <h3>Tokyo</h3>
+                            <p>Japan</p>
+                          </div>
+                          <div class="location-weather">
+                            <div class="location-temp">28°C</div>
+                            <div class="location-icon">
+                              <i class="fas fa-sun"></i>
+                            </div>
+                          </div>
+                          <div class="location-actions">
+                            <button class="btn btn-small">
+                              View Details
+                            </button>
+                            <button class="btn btn-small btn-outline">
+                              Remove
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="alerts" class="dashboard-section">
+                    <h2>Weather Alerts</h2>
+                    <div class="row mb-4">
+                      <div class="col-md-6">
+                        <button id="create-alert-btn" class="btn btn-primary">
+                          Create New Alert
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="alerts-table-container">
+                          <table class="alerts-table">
+                            <thead>
+                              <tr>
+                                <th>Location</th>
+                                <th>Alert Type</th>
+                                <th>Condition</th>
+                                <th>Threshold</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>New York</td>
+                                <td>Temperature</td>
+                                <td>Above</td>
+                                <td>30°C</td>
+                                <td>
+                                  <span class="status active">Active</span>
+                                </td>
+                                <td>
+                                  <button class="btn btn-small">Edit</button>
+                                  <button class="btn btn-small btn-outline">
+                                    Delete
+                                  </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>London</td>
+                                <td>Precipitation</td>
+                                <td>Above</td>
+                                <td>5mm</td>
+                                <td>
+                                  <span class="status active">Active</span>
+                                </td>
+                                <td>
+                                  <button class="btn btn-small">Edit</button>
+                                  <button class="btn btn-small btn-outline">
+                                    Delete
+                                  </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Tokyo</td>
+                                <td>Wind</td>
+                                <td>Above</td>
+                                <td>20km/h</td>
+                                <td>
+                                  <span class="status inactive"
+                                    >Inactive</span
+                                  >
+                                </td>
+                                <td>
+                                  <button class="btn btn-small">Edit</button>
+                                  <button class="btn btn-small btn-outline">
+                                    Delete
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="settings" class="dashboard-section">
+                    <h2>Settings</h2>
+                    <div class="settings-container">
+                      <div class="settings-card">
+                        <h3>Display Settings</h3>
+                        <div class="settings-group">
+                          <label>Temperature Unit</label>
+                          <div class="settings-options">
+                            <label class="radio-label">
+                              <input
+                                type="radio"
+                                name="temp-unit"
+                                value="celsius"
+                                checked
+                              />
+                              <span>Celsius (°C)</span>
+                            </label>
+                            <label class="radio-label">
+                              <input
+                                type="radio"
+                                name="temp-unit"
+                                value="fahrenheit"
+                              />
+                              <span>Fahrenheit (°F)</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="settings-group">
+                          <label>Wind Speed Unit</label>
+                          <div class="settings-options">
+                            <label class="radio-label">
+                              <input
+                                type="radio"
+                                name="wind-unit"
+                                value="kmh"
+                                checked
+                              />
+                              <span>Kilometers per hour (km/h)</span>
+                            </label>
+                            <label class="radio-label">
+                              <input
+                                type="radio"
+                                name="wind-unit"
+                                value="mph"
+                              />
+                              <span>Miles per hour (mph)</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="settings-group">
+                          <label>Theme</label>
+                          <div class="settings-options">
+                            <label class="radio-label">
+                              <input
+                                type="radio"
+                                name="theme"
+                                value="light"
+                                checked
+                              />
+                              <span>Light</span>
+                            </label>
+                            <label class="radio-label">
+                              <input type="radio" name="theme" value="dark" />
+                              <span>Dark</span>
+                            </label>
+                          </div>
+                        </div>
+                        <button class="btn btn-primary">Save Changes</button>
+                      </div>
+
+                      <div class="settings-card">
+                        <h3>Notification Settings</h3>
+                        <div class="settings-group">
+                          <label>Email Notifications</label>
+                          <div class="settings-options">
+                            <label class="switch">
+                              <input type="checkbox" checked />
+                              <span class="slider round"></span>
+                            </label>
+                            <span
+                              >Receive email notifications for alerts</span
+                            >
+                          </div>
+                        </div>
+                        <div class="settings-group">
+                          <label>Push Notifications</label>
+                          <div class="settings-options">
+                            <label class="switch">
+                              <input type="checkbox" checked />
+                              <span class="slider round"></span>
+                            </label>
+                            <span>Receive push notifications for alerts</span>
+                          </div>
+                        </div>
+                        <div class="settings-group">
+                          <label>Daily Forecast</label>
+                          <div class="settings-options">
+                            <label class="switch">
+                              <input type="checkbox" />
+                              <span class="slider round"></span>
+                            </label>
+                            <span>Receive daily forecast notifications</span>
+                          </div>
+                        </div>
+                        <button class="btn btn-primary">Save Changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alerts Page (Auth Required) -->
+      <section id="alerts" class="page auth-required-page">
+        <div class="container">
+          <h1>Weather Alerts</h1>
+          <p class="section-description">
+            Set up custom alerts to be notified when specific weather
+            conditions occur in your saved locations.
+          </p>
+
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <button id="create-alert-btn-page" class="btn btn-primary">
+                Create New Alert
+              </button>
+            </div>
+          </div>
+
+          <div class="alerts-container">
+            <div class="alerts-table-container">
+              <table class="alerts-table">
+                <thead>
+                  <tr>
+                    <th>Location</th>
+                    <th>Alert Type</th>
+                    <th>Condition</th>
+                    <th>Threshold</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>New York</td>
+                    <td>Temperature</td>
+                    <td>Above</td>
+                    <td>30°C</td>
+                    <td><span class="status active">Active</span></td>
+                    <td>
+                      <button class="btn btn-small">Edit</button>
+                      <button class="btn btn-small btn-outline">
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>London</td>
+                    <td>Precipitation</td>
+                    <td>Above</td>
+                    <td>5mm</td>
+                    <td><span class="status active">Active</span></td>
+                    <td>
+                      <button class="btn btn-small">Edit</button>
+                      <button class="btn btn-small btn-outline">
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Tokyo</td>
+                    <td>Wind</td>
+                    <td>Above</td>
+                    <td>20km/h</td>
+                    <td><span class="status inactive">Inactive</span></td>
+                    <td>
+                      <button class="btn btn-small">Edit</button>
+                      <button class="btn btn-small btn-outline">
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Locations Page (Auth Required) -->
+      <section id="locations" class="page auth-required-page">
+        <div class="container">
+          <h1>Saved Locations</h1>
+          <p class="section-description">
+            Manage your saved locations and quickly access weather information
+            for places you care about.
+          </p>
+
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <div class="add-location-card">
+                <h3>Add New Location</h3>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="add-location-page"
+                    placeholder="Enter city name..."
+                  />
+                  <button id="add-location-btn-page" class="btn btn-primary">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row locations-list">
+            <!-- Location cards will be added dynamically -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="location-card">
+                <div class="location-info">
+                  <h3>New York</h3>
+                  <p>United States</p>
+                </div>
+                <div class="location-weather">
+                  <div class="location-temp">24°C</div>
+                  <div class="location-icon">
+                    <i class="fas fa-cloud-sun"></i>
+                  </div>
+                </div>
+                <div class="location-actions">
+                  <button class="btn btn-small">View Details</button>
+                  <button class="btn btn-small btn-outline">Remove</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="location-card">
+                <div class="location-info">
+                  <h3>London</h3>
+                  <p>United Kingdom</p>
+                </div>
+                <div class="location-weather">
+                  <div class="location-temp">18°C</div>
+                  <div class="location-icon">
+                    <i class="fas fa-cloud-rain"></i>
+                  </div>
+                </div>
+                <div class="location-actions">
+                  <button class="btn btn-small">View Details</button>
+                  <button class="btn btn-small btn-outline">Remove</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="location-card">
+                <div class="location-info">
+                  <h3>Tokyo</h3>
+                  <p>Japan</p>
+                </div>
+                <div class="location-weather">
+                  <div class="location-temp">28°C</div>
+                  <div class="location-icon">
+                    <i class="fas fa-sun"></i>
+                  </div>
+                </div>
+                <div class="location-actions">
+                  <button class="btn btn-small">View Details</button>
+                  <button class="btn btn-small btn-outline">Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Forecast Page (Auth Required) -->
+      <section id="forecast" class="page auth-required-page">
+        <div class="container">
+          <h1>Detailed Forecast</h1>
+          <p class="section-description">
+            View detailed weather forecasts for your selected location.
+          </p>
+
+          <div class="forecast-header">
+            <div class="location-selector">
+              <label for="forecast-location">Select Location:</label>
+              <select id="forecast-location">
+                <option value="current">Current Location</option>
+                <option value="New York">New York</option>
+                <option value="London">London</option>
+                <option value="Tokyo">Tokyo</option>
+              </select>
+            </div>
+
+            <div class="forecast-tabs">
+              <button class="tab-btn active" data-tab="hourly">Hourly</button>
+              <button class="tab-btn" data-tab="daily">Daily</button>
+              <button class="tab-btn" data-tab="details">Details</button>
+            </div>
+          </div>
+
+          <div class="forecast-content">
+            <div id="hourly-tab" class="tab-content active">
+              <h2>Hourly Forecast</h2>
+              <div class="hourly-chart-container">
+                <canvas id="hourly-chart"></canvas>
+              </div>
+              <div
+                class="forecast-container"
+                id="hourly-forecast-container-page"
+              >
+                <!-- Hourly forecast items will be added here dynamically -->
+                <div class="forecast-item skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+                <div class="forecast-item skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+                <div class="forecast-item skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+                <div class="forecast-item skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="daily-tab" class="tab-content">
+              <h2>7-Day Forecast</h2>
+              <div class="daily-chart-container">
+                <canvas id="daily-chart"></canvas>
+              </div>
+              <div
+                class="forecast-container"
+                id="weekly-forecast-container-page"
+              >
+                <!-- Weekly forecast items will be added here dynamically -->
+                <div class="forecast-item weekly skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+                <div class="forecast-item weekly skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+                <div class="forecast-item weekly skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+                <div class="forecast-item weekly skeleton-item">
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-circle"></div>
+                  <div class="skeleton-line"></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="details-tab" class="tab-content">
+              <h2>Weather Details</h2>
+              <div class="weather-details-card">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="detail-group">
+                      <h3>Temperature</h3>
+                      <div class="detail-item">
+                        <span class="detail-label">Current:</span>
+                        <span class="detail-value">24°C</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Feels Like:</span>
+                        <span class="detail-value">26°C</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Min:</span>
+                        <span class="detail-value">20°C</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Max:</span>
+                        <span class="detail-value">27°C</span>
+                      </div>
+                    </div>
+
+                    <div class="detail-group">
+                      <h3>Wind</h3>
+                      <div class="detail-item">
+                        <span class="detail-label">Speed:</span>
+                        <span class="detail-value">5 km/h</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Direction:</span>
+                        <span class="detail-value">NE</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Gust:</span>
+                        <span class="detail-value">8 km/h</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="detail-group">
+                      <h3>Precipitation</h3>
+                      <div class="detail-item">
+                        <span class="detail-label">Probability:</span>
+                        <span class="detail-value">20%</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Amount:</span>
+                        <span class="detail-value">0 mm</span>
+                      </div>
+                    </div>
+
+                    <div class="detail-group">
+                      <h3>Atmosphere</h3>
+                      <div class="detail-item">
+                        <span class="detail-label">Humidity:</span>
+                        <span class="detail-value">65%</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Pressure:</span>
+                        <span class="detail-value">1015 hPa</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Visibility:</span>
+                        <span class="detail-value">10 km</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">UV Index:</span>
+                        <span class="detail-value">5 (Moderate)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="detail-group">
+                  <h3>Sun & Moon</h3>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="detail-item">
+                        <span class="detail-label">Sunrise:</span>
+                        <span class="detail-value">5:42 AM</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Sunset:</span>
+                        <span class="detail-value">8:21 PM</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="detail-item">
+                        <span class="detail-label">Moonrise:</span>
+                        <span class="detail-value">7:15 PM</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Moonset:</span>
+                        <span class="detail-value">4:30 AM</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Moon Phase:</span>
+                        <span class="detail-value">Waxing Gibbous</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Auth Modals - Updated for improved UI -->
+    <!-- Login Modal Update -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="auth-form-container">
+          <h2>Login to Your Account</h2>
+          
+          <div class="social-login">
+            <button class="social-login-btn">
+              <i class="fab fa-google" style="color: #DB4437;"></i> Google
+            </button>
+            <button class="social-login-btn">
+              <i class="fab fa-facebook-f" style="color: #4267B2;"></i> Facebook
+            </button>
+          </div>
+          
+          <div class="form-divider">
+            <span>or login with email</span>
+          </div>
+          
+          <form id="login-form">
+            <div class="form-group">
+              <label for="login-email">Email</label>
+              <input type="email" id="login-email" placeholder="Enter your email" required />
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password</label>
+              <input type="password" id="login-password" placeholder="Enter your password" required />
+            </div>
+            <div class="form-group role-selection">
+              <label>Login as:</label>
+              <div class="role-options">
+                <label class="role-label">
+                  <input
+                    type="radio"
+                    name="login-role"
+                    value="customer"
+                    checked
+                  />
+                  <span>Customer</span>
+                </label>
+                <label class="role-label">
+                  <input type="radio" name="login-role" value="admin" />
+                  <span>Admin</span>
+                </label>
+              </div>
+            </div>
+            <div class="remember-me">
+              <input type="checkbox" id="remember-me" />
+              <label for="remember-me">Remember me</label>
+            </div>
+            <div class="form-actions">
+              <a href="#" id="forgot-password-link">Forgot Password?</a>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+          </form>
+          
+          <p class="mt-4 text-center">
+            Don't have an account? 
+            <a href="#" id="signup-link">Sign up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signup Modal Update -->
+    <div id="signup-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="auth-form-container">
+          <h2>Create an Account</h2>
+          
+          <div class="social-login">
+            <button class="social-login-btn">
+              <i class="fab fa-google" style="color: #DB4437;"></i> Google
+            </button>
+            <button class="social-login-btn">
+              <i class="fab fa-facebook-f" style="color: #4267B2;"></i> Facebook
+            </button>
+          </div>
+          
+          <div class="form-divider">
+            <span>or register with email</span>
+          </div>
+          
+          <form id="signup-form">
+            <div class="form-group">
+              <label for="signup-name">Full Name</label>
+              <input type="text" id="signup-name" placeholder="Enter your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="signup-email">Email</label>
+              <input type="email" id="signup-email" placeholder="Enter your email" required />
+            </div>
+            <div class="form-group">
+              <label for="signup-password">Password</label>
+              <input type="password" id="signup-password" placeholder="Create a password" required />
+            </div>
+            <div class="form-group">
+              <label for="signup-confirm-password">Confirm Password</label>
+              <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required />
+            </div>
+            <div class="form-group role-selection">
+              <label>Register as:</label>
+              <div class="role-options">
+                <label class="role-label">
+                  <input
+                    type="radio"
+                    name="signup-role"
+                    value="customer"
+                    checked
+                  />
+                  <span>Customer</span>
+                </label>
+                <label class="role-label">
+                  <input type="radio" name="signup-role" value="admin" />
+                  <span>Admin</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+          </form>
+          
+          <p class="mt-4 text-center">
+            Already have an account? 
+            <a href="#" id="login-link">Login</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="forgot-password-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="auth-form-container">
+          <h2>Reset Your Password</h2>
+          <p>
+            Enter your email address and we'll send you a link to reset your
+            password.
+          </p>
+          <form id="forgot-password-form">
+            <div class="form-group">
+              <label for="reset-email">Email</label>
+              <input type="email" id="reset-email" placeholder="Enter your email" required />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                Send Reset Link
+              </button>
+            </div>
+          </form>
+          <p class="mt-4 text-center">
+            Remember your password? 
+            <a href="#" id="back-to-login">Back to login</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create Alert Modal -->
+    <div id="create-alert-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Create Weather Alert</h2>
+        <form id="create-alert-form">
+          <div class="form-group">
+            <label for="alert-location">Location</label>
+            <select id="alert-location" required>
+              <option value="">Select a location</option>
+              <option value="New York">New York</option>
+              <option value="London">London</option>
+              <option value="Tokyo">Tokyo</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="alert-type">Alert Type</label>
+            <select id="alert-type" required>
+              <option value="">Select alert type</option>
+              <option value="temperature">Temperature</option>
+              <option value="precipitation">Precipitation</option>
+              <option value="wind">Wind Speed</option>
+              <option value="humidity">Humidity</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="alert-condition">Condition</label>
+            <select id="alert-condition" required>
+              <option value="">Select condition</option>
+              <option value="above">Above</option>
+              <option value="below">Below</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="alert-threshold">Threshold</label>
+            <div class="threshold-input">
+              <input type="number" id="alert-threshold" required />
+              <span class="threshold-unit">°C</span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+              Create Alert
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row footer-container">
+        <div class="col-md-4 footer-section">
+          <h3>WeatherWise</h3>
+          <p>
+            Your personal weather assistant providing accurate forecasts,
+            real-time updates, and personalized weather alerts for any
+            location around the world.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#" data-page="home">Home</a></li>
+            <li><a href="#" data-page="about">About</a></li>
+            <li><a href="#" data-page="features">Features</a></li>
+            <li><a href="#" id="footer-login">Login</a></li>
+            <li><a href="#" id="footer-signup">Sign Up</a></li>
+            <li>
+              <a href="#" id="footer-forgot-password">Forgot Password</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer-section">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li>
+              <i class="fas fa-map-marker-alt"></i> 123 Weather Street, City,
+              Country
+            </li>
+            <li><i class="fas fa-phone"></i> +1 234 567 8901</li>
+            <li><i class="fas fa-envelope"></i> info@weatherwise.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 WeatherWise. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Chart.js for weather charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Custom JS -->
+  <script src="js/auth.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Add skeleton loading styles -->
+  <style>
+    .skeleton-item {
+      background-color: #f8f2fb !important;
+    }
+    
+    .skeleton-line {
+      height: 12px;
+      width: 80%;
+      margin: 10px auto;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #eee 0%, #f9f9f9 50%, #eee 100%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+    
+    .skeleton-circle {
+      height: 50px;
+      width: 50px;
+      margin: 15px auto;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #eee 0%, #f9f9f9 50%, #eee 100%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% {
+        background-position: -200% 0;
+      }
+      100% {
+        background-position: 200% 0;
+      }
+    }
+  </style>
+</body>
+</html>

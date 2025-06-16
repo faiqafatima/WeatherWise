@@ -1,0 +1,359 @@
+[
+  {
+    "city": "New York",
+    "country": "US",
+    "coordinates": {
+      "lat": 40.7128,
+      "lon": -74.006
+    },
+    "current": {
+      "temp": 24,
+      "feels_like": 26,
+      "humidity": 65,
+      "pressure": 1015,
+      "wind_speed": 5,
+      "visibility": 10,
+      "description": "Partly Cloudy",
+      "icon": "02d"
+    },
+    "hourly": [
+      {
+        "time": "2024-05-15T15:00:00.000Z",
+        "temp": 24,
+        "description": "Partly Cloudy",
+        "icon": "02d"
+      },
+      {
+        "time": "2024-05-15T16:00:00.000Z",
+        "temp": 25,
+        "description": "Scattered Clouds",
+        "icon": "03d"
+      },
+      {
+        "time": "2024-05-15T17:00:00.000Z",
+        "temp": 26,
+        "description": "Partly Cloudy",
+        "icon": "02d"
+      },
+      {
+        "time": "2024-05-15T18:00:00.000Z",
+        "temp": 27,
+        "description": "Sunny",
+        "icon": "01d"
+      },
+      {
+        "time": "2024-05-15T19:00:00.000Z",
+        "temp": 26,
+        "description": "Sunny",
+        "icon": "01d"
+      },
+      {
+        "time": "2024-05-15T20:00:00.000Z",
+        "temp": 25,
+        "description": "Partly Cloudy",
+        "icon": "02d"
+      },
+      {
+        "time": "2024-05-15T21:00:00.000Z",
+        "temp": 23,
+        "description": "Scattered Clouds",
+        "icon": "03d"
+      },
+      {
+        "time": "2024-05-15T22:00:00.000Z",
+        "temp": 22,
+        "description": "Scattered Clouds",
+        "icon": "03d"
+      }
+    ],
+    "daily": [
+      {
+        "date": "2024-05-15T12:00:00.000Z",
+        "temp_min": 20,
+        "temp_max": 27,
+        "description": "Partly Cloudy",
+        "icon": "02d"
+      },
+      {
+        "date": "2024-05-16T12:00:00.000Z",
+        "temp_min": 19,
+        "temp_max": 25,
+        "description": "Scattered Clouds",
+        "icon": "03d"
+      },
+      {
+        "date": "2024-05-17T12:00:00.000Z",
+        "temp_min": 18,
+        "temp_max": 23,
+        "description": "Light Rain",
+        "icon": "10d"
+      },
+      {
+        "date": "2024-05-18T12:00:00.000Z",
+        "temp_min": 17,
+        "temp_max": 22,
+        "description": "Moderate Rain",
+        "icon": "09d"
+      },
+      {
+        "date": "2024-05-19T12:00:00.000Z",
+        "temp_min": 18,
+        "temp_max": 24,
+        "description": "Partly Cloudy",
+        "icon": "02d"
+      },
+      {
+        "date": "2024-05-20T12:00:00.000Z",
+        "temp_min": 20,
+        "temp_max": 26,
+        "description": "Sunny",
+        "icon": "01d"
+      },
+      {
+        "date": "2024-05-21T12:00:00.000Z",
+        "temp_min": 21,
+        "temp_max": 28,
+        "description": "Sunny",
+        "icon": "01d"
+      }
+    ]
+  },
+  {
+    "city": "London",
+    "country": "UK",
+    "coordinates": {
+      "lat": 51.5074,
+      "lon": -0.1278
+    },
+    "current": {
+      "temp": 18,
+      "feels_like": 17,
+      "humidity": 70,
+      "pressure": 1012,
+      "wind_speed": 8,
+      "visibility": 9,
+      "description": "Light Rain",
+      "icon": "10d"
+    },
+    "hourly": [
+      {
+        "time": "2024-05-15T15:00:00.000Z",
+        "temp": 18,
+        "description": "Light Rain",
+        "icon": "10d"
+      },
+      {
+        "time": "2024-05-15T16:00:00.000Z",
+        "temp": 17,
+        "description": "Light Rain",
+        "icon": "10d"
+      },
+      {
+        "time": "2024-05-15T17:00:00.000Z",
+        "temp": 17,
+        "description": "Overcast Clouds",
+        "icon": "04d"
+      },
+      {
+        "time": "2024-05-15T18:00:00.000Z",
+        "temp": 16,
+        "description": "Overcast Clouds",
+        "icon": "04d"
+      },
+      {
+        "time": "2024-05-15T19:00:00.000Z",
+        "temp": 15,
+        "description": "Scattered Clouds",
+        "icon": "03d"
+      },
+      {
+        "time": "2024-05-15T20:00:00.000Z",
+        "temp": 14,
+        "description": "Scattered Clouds",
+        "icon": "03d"
+      },
+      {
+        "time": "2024-05-15T21:00:00.000Z",
+        "temp": 13,
+        "description": "Few Clouds",
+        "icon": "02n"
+      },
+      {
+        "time": "2024-05-15T22:00:00.000Z",
+        "temp": 12,
+        "description": "Clear Sky",
+        "icon": "01n"
+      }
+    ],
+    "daily": [
+      {
+        "date": "2024-05-15T12:00:00.000Z",
+        "temp_min": 12,
+        "temp_max": 18,
+        "description": "Light Rain",
+        "icon": "10d"
+      },
+      {
+        "date": "2024-05-16T12:00:00.000Z",
+        "temp_min": 11,
+        "temp_max": 19,
+        "description": "Partly Cloudy",
+        "icon": "02d"
+      },
+      {
+        "date": "2024-05-17T12:00:00.000Z",
+        "temp_min": 13,
+        "temp_max": 20,
+        "description": "Scattered Clouds",
+        "icon": "03d"
+      },
+      {
+        "date": "2024-05-18T12:00:00.000Z",
+        "temp_min": 14,
+        "temp_max": 21,
+        "description": "Sunny",
+        "icon": "01d"
+      },
+      {
+        "date": "2024-05-19T12:00:00.000Z",
+        "temp_min": 13,
+        "temp_max": 19,
+        "description": "Light Rain",
+        "icon": "10d"
+      },
+      {
+        "date": "2024-05-20T12:00:00.000Z",
+        "temp_min": 12,
+        "temp_max": 18,
+        "description": "Moderate Rain",
+        "icon": "09d"
+      },
+      {
+        "date": "2024-05-21T12:00:00.000Z",
+        "temp_min": 11,
+        "temp_max": 17,
+        "description": "Light Rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "city": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "lat": 35.6762,
+      "lon": 139.6503
+    },
+    "current": {
+      "temp": 28,
+      "feels_like": 30,
+      "humidity": 55,
+      "pressure": 1010,
+      "wind_speed": 3,
+      "visibility": 10,
+      "description": "Sunny",
+      "icon": "01d"
+    },
+    "hourly": [
+      {
+        "time": "2024-05-15T15:00:00.000Z",
+        "temp": 28,
+        "description": "Sunny",
+        "icon": "01d"
+      },
+      {
+        "time": "2024-05-15T16:00:00.000Z",
+        "temp": 29,
+        "description": "Sunny",
+        "icon": "01d"
+      },
+      {
+        "time": "2024-05-15T17:00:00.000Z",
+        "temp": 30,
+        "description": "Sunny",
+        "icon": "01d"
+      },
+      {
+        "time": "2024-05-15T18:00:00.000Z",
+        "temp": 29,
+        "description": "Partly Cloudy",
+        "icon": "02d"
+      },
+      {
+        "time": "2024-05-15T19:00:00.000Z",
+        "temp": 27,
+        "description": "Partly Cloudy",
+        "icon": "02d"
+      },
+      {
+        "time": "2024-05-15T20:00:00.000Z",
+        "temp": 25,
+        "description": "Clear",
+        "icon": "01n"
+      },
+      {
+        "time": "2024-05-15T21:00:00.000Z",
+        "temp": 24,
+        "description": "Clear",
+        "icon": "01n"
+      },
+      {
+        "time": "2024-05-15T22:00:00.000Z",
+        "temp": 23,
+        "description": "Clear",
+        "icon": "01n"
+      }
+    ],
+    "daily": [
+      {
+        "date": "2024-05-15T12:00:00.000Z",
+        "temp_min": 23,
+        "temp_max": 30,
+        "description": "Sunny",
+        "icon": "01d"
+      },
+      {
+        "date": "2024-05-16T12:00:00.000Z",
+        "temp_min": 22,
+        "temp_max": 29,
+        "description": "Partly Cloudy",
+        "icon": "02d"
+      },
+      {
+        "date": "2024-05-17T12:00:00.000Z",
+        "temp_min": 23,
+        "temp_max": 31,
+        "description": "Sunny",
+        "icon": "01d"
+      },
+      {
+        "date": "2024-05-18T12:00:00.000Z",
+        "temp_min": 24,
+        "temp_max": 32,
+        "description": "Sunny",
+        "icon": "01d"
+      },
+      {
+        "date": "2024-05-19T12:00:00.000Z",
+        "temp_min": 25,
+        "temp_max": 33,
+        "description": "Sunny",
+        "icon": "01d"
+      },
+      {
+        "date": "2024-05-20T12:00:00.000Z",
+        "temp_min": 24,
+        "temp_max": 31,
+        "description": "Partly Cloudy",
+        "icon": "02d"
+      },
+      {
+        "date": "2024-05-21T12:00:00.000Z",
+        "temp_min": 23,
+        "temp_max": 30,
+        "description": "Scattered Clouds",
+        "icon": "03d"
+      }
+    ]
+  }
+]
